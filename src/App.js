@@ -26,7 +26,7 @@ function App() {
       <div className="main-container">
         <Header></Header>
         <Scoreboard currentScore={score}></Scoreboard>
-        <Gallery updateClicks={updateClicks}></Gallery>
+        <Gallery updateClicks={updateClicks} currentScore={score}></Gallery>
       </div>
     </div>
   );
