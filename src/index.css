@@ -86,3 +86,15 @@
     text-align: center;
     margin: 1rem 2rem 1rem 2rem;
 }
+
+/* MODAL */
+#modal {
+    height: 100vh;
+    width: 100vw;
+    text-align: center;
+}
+
+#modal > div {
+    position: relative;
+    top: 50%;
+}
