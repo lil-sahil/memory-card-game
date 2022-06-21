@@ -11,8 +11,6 @@ import { randomizer } from "../utils/randomizer";
 import { pokemonNames } from "../setUp";
 
 const Gallery = (props) => {
-  //   List of pokemon characters
-
   //   Initialize Index array to choose the order in which to display the pokemon.
   const [indexArray, setIndexArray] = useState(
     Array.from(Array(pokemonNames.length), (e, i) => i)

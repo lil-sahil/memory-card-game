@@ -2,16 +2,74 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Kdam Thmor Pro', sans-serif;
 }
 
 .main-container {
-    margin: 0 auto;
+    margin: 1rem auto 1rem auto;
     max-width: 80vw;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
+
+/* UTILITIES */
+/* Color */
+.current-score-color-below {
+    color: red;
+}
+
+.current-score-color-equal{
+    color: orange;
+}
+
+.current-score-color-more {
+    color: green;
+}
+
+.best-score-color {
+    color:darkgoldenrod
+}
+
+/* Displays */
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+/* TITLE */
+#title {
+    font-family: 'Fascinate', cursive;
+    font-size: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#main-icon {
+    font-size: 5rem;
+    color: red;
+}
+
+/* SCOREBOARD */
+
+#scoreboard {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    font-size: 1.2rem;
+}
+
+#scoreboard > div {
+    margin-right: 1rem;
+}
+
 
 /* GALLERY */
 #gallery {
