@@ -8,7 +8,6 @@ function App() {
   const [storedClicks, setStoredClicks] = useState([]);
   const [score, setScore] = useState(0);
   const [bestScore, setBestScore] = useState(0);
-  const [displayStateContainer, setDisplayStateContainer] = useState("show");
   const [displayStateModal, setDisplayStateModal] = useState("hide");
 
   const updateClicks = (pokemonName) => {
@@ -16,9 +15,7 @@ function App() {
     if (storedClicks.includes(pokemonName)) {
       if (score > bestScore) {
         setBestScore(score);
-        setDisplayStateContainer("hide");
         setDisplayStateModal("show");
-        console.log(displayStateContainer);
       }
       // Reset Score
       setScore(0);
@@ -33,19 +30,20 @@ function App() {
   };
 
   const displayHandler = () => {
-    setDisplayStateContainer("show");
     setDisplayStateModal("hide");
   };
 
   return (
     <div className="App">
-      <div className={`main-container ${displayStateContainer}`}>
+      <div className="main-container">
         <Header></Header>
         <Scoreboard currentScore={score} bestScore={bestScore}></Scoreboard>
         <Gallery updateClicks={updateClicks} currentScore={score}></Gallery>
+        <Modal
+          display={displayStateModal}
+          handleDisplay={displayHandler}
+        ></Modal>
       </div>
-
-      <Modal display={displayStateModal} handleDisplay={displayHandler}></Modal>
     </div>
   );
 }
