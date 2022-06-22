@@ -1,6 +1,9 @@
 import React from "react";
 import { useState, useEffect } from "react";
 
+// Utils
+import capitalizeFirstLetter from "../utils/capitalizeFirstLetter";
+
 const Card = (props) => {
   const { pokemonName } = props;
 
@@ -19,7 +22,7 @@ const Card = (props) => {
       onClick={() => props.updateClicks(pokemonName)}
     >
       <img src={imageUrl} alt="Pokemon"></img>
-      <p>{pokemonName}</p>
+      <p>{capitalizeFirstLetter(pokemonName)}</p>
     </div>
   );
 };
