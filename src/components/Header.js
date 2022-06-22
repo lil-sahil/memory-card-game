@@ -4,7 +4,7 @@ import { CgPokemon } from "react-icons/cg";
 const Header = () => {
   return (
     <div id="title">
-      The Memory Card Game
+      <span>The Memory Card Game</span>
       <CgPokemon id="main-icon"></CgPokemon>
     </div>
   );
