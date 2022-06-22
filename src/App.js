@@ -35,8 +35,8 @@ function App() {
 
   return (
     <div className="App">
+      <Header></Header>
       <div className="main-container">
-        <Header></Header>
         <Scoreboard currentScore={score} bestScore={bestScore}></Scoreboard>
         <Gallery updateClicks={updateClicks} currentScore={score}></Gallery>
         <Modal
